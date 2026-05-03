@@ -1,0 +1,59 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+code, pre {
+  font-family: 'Fira Code', monospace;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #0ea5e9;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #0284c7;
+}
+
+/* Smooth transitions */
+* {
+  @apply transition-colors duration-300;
+}
+
+/* Gradient text */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent;
+}
+
+/* Animated border */
+.border-accent {
+  @apply border-l-4 pl-4;
+  border-color: theme('colors.accent');
+}
+
+/* Hover effect for cards */
+.card-hover {
+  @apply hover:shadow-lg hover:shadow-accent/20 transition-all duration-300;
+}
+
+/* Glass effect */
+.glass {
+  @apply bg-white/5 backdrop-blur-sm border border-white/10;
+}
