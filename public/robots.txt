@@ -3,12 +3,8 @@ Allow: /
 Disallow: /api/
 Disallow: /.next/
 
-Sitemap: https://your-portfolio.com/sitemap.xml
-
-# Crawl-delay
 Crawl-delay: 1
 
-# Specific crawlers
 User-agent: Googlebot
 Crawl-delay: 0
 

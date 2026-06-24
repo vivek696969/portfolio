@@ -1,95 +1,128 @@
 'use client'
 
-import { Code2, Shield, BarChart3, Database } from 'lucide-react'
+import { Shield, Terminal, Globe, Code2 } from 'lucide-react'
+import { motion } from 'framer-motion'
 import SpotlightCard from './SpotlightCard'
 
-export default function Skills() {
-  const skillCategories = [
-    {
-      icon: Shield,
-      title: 'Security Tools',
-      skills: ['Splunk', 'ELK Stack', 'Wireshark', 'Suricata'],
-    },
-    {
-      icon: BarChart3,
-      title: 'SIEM & Monitoring',
-      skills: ['Event Correlation', 'Log Analysis', 'Alert Tuning', 'Baseline Analysis'],
-    },
-    {
-      icon: Code2,
-      title: 'Technical Skills',
-      skills: ['Python', 'Bash/PowerShell', 'SQL', 'Regex', 'Linux/Windows'],
-    },
-    {
-      icon: Database,
-      title: 'Frameworks & Standards',
-      skills: ['NIST', 'ISO 27001', 'CIS Controls', 'MITRE ATT&CK'],
-    },
-  ]
+const skillCategories = [
+  {
+    icon: Shield,
+    title: 'SOC Operations',
+    skills: [
+      'Log Analysis',
+      'Alert Triage',
+      'Threat Detection',
+      'Incident Response Basics',
+      'Log Monitoring',
+    ],
+  },
+  {
+    icon: Terminal,
+    title: 'Linux & Command-Line',
+    skills: [
+      'File Permissions',
+      'Process Monitoring',
+      'grep / find / SSH',
+      'netcat / tar / base64',
+      'Log File Analysis',
+    ],
+  },
+  {
+    icon: Globe,
+    title: 'Networking Fundamentals',
+    skills: [
+      'TCP/IP & OSI Model',
+      'DNS & HTTP/HTTPS',
+      'Firewalls & IDS/IPS',
+      'Network Protocols',
+    ],
+  },
+  {
+    icon: Code2,
+    title: 'Programming & Other',
+    skills: [
+      'Python Scripting',
+      'Security Automation',
+      'Web Development (HTML/CSS)',
+      '80 WPM Typing @ 99%',
+    ],
+  },
+]
 
+const cardVariants = {
+  hidden: { opacity: 0, y: 50 },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.15,
+      duration: 0.6,
+      ease: 'easeOut' as const,
+    },
+  }),
+}
+
+export default function Skills() {
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-24 px-4 sm:px-6 lg:px-8">
       <div className="max-w-6xl mx-auto">
-        <div className="text-center mb-16">
+        {/* Section heading */}
+        <motion.div
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.3 }}
+          transition={{ duration: 0.6 }}
+          className="text-center mb-16"
+        >
           <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            Skills & <span className="gradient-text">Expertise</span>
+            Skills &amp; <span className="gradient-text">Expertise</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Core competencies as a cybersecurity SOC analyst
+            Core competencies built through hands-on labs, independent projects, and
+            continuous learning
           </p>
-        </div>
+        </motion.div>
 
+        {/* Cards grid */}
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon
             return (
-              <SpotlightCard
+              <motion.div
                 key={index}
-                className="p-6 flex flex-col h-full"
+                custom={index}
+                variants={cardVariants}
+                initial="hidden"
+                whileInView="visible"
+                viewport={{ once: true, amount: 0.2 }}
               >
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="p-2 bg-accent/20 rounded-lg">
-                    <Icon size={24} className="text-accent" />
+                <SpotlightCard className="p-6 flex flex-col h-full">
+                  {/* Card header */}
+                  <div className="flex items-center gap-3 mb-5">
+                    <div className="p-2.5 bg-accent/10 border border-accent/20 rounded-lg">
+                      <Icon size={22} className="text-accent" />
+                    </div>
+                    <h3 className="text-lg font-semibold text-white">
+                      {category.title}
+                    </h3>
                   </div>
-                  <h3 className="text-lg font-semibold">{category.title}</h3>
-                </div>
-                <ul className="space-y-2">
-                  {category.skills.map((skill, idx) => (
-                    <li key={idx} className="text-gray-400 flex items-center gap-2">
-                      <span className="w-1.5 h-1.5 bg-accent rounded-full"></span>
-                      {skill}
-                    </li>
-                  ))}
-                </ul>
-              </SpotlightCard>
+
+                  {/* Skills as pill tags */}
+                  <div className="flex flex-wrap gap-2">
+                    {category.skills.map((skill, idx) => (
+                      <span
+                        key={idx}
+                        className="inline-flex items-center gap-1.5 px-3 py-1.5 text-sm text-gray-300 bg-white/5 border border-gray-700/50 rounded-full transition-all duration-300 hover:border-accent/50 hover:text-white hover:shadow-[0_0_12px_rgba(14,165,233,0.15)] cursor-default"
+                      >
+                        <span className="w-1.5 h-1.5 bg-accent rounded-full flex-shrink-0" />
+                        {skill}
+                      </span>
+                    ))}
+                  </div>
+                </SpotlightCard>
+              </motion.div>
             )
           })}
-        </div>
-
-        {/* Proficiency Chart */}
-        <div className="mt-16">
-          <h3 className="text-2xl font-bold mb-8">Technical Proficiency</h3>
-          <div className="space-y-4">
-            {[
-              { name: 'SIEM Tools', level: 85 },
-              { name: 'Python & Scripting', level: 75 },
-              { name: 'Network Analysis', level: 80 },
-              { name: 'Linux/Windows Administration', level: 70 },
-            ].map((item, index) => (
-              <div key={index}>
-                <div className="flex justify-between mb-2">
-                  <span className="font-medium">{item.name}</span>
-                  <span className="text-accent">{item.level}%</span>
-                </div>
-                <div className="w-full bg-gray-700/30 rounded-full h-2">
-                  <div
-                    className="bg-gradient-to-r from-accent to-cyan-400 h-2 rounded-full"
-                    style={{ width: `${item.level}%` }}
-                  ></div>
-                </div>
-              </div>
-            ))}
-          </div>
         </div>
       </div>
     </section>
