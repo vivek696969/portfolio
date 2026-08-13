@@ -88,8 +88,8 @@ export default function Certifications() {
   return (
     <section id="certs" className="relative py-24 px-4 sm:px-6 lg:px-8">
       {/* Background glow */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute right-0 top-1/3 h-[400px] w-[600px] rounded-full bg-accent/5 blur-[120px]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden max-w-full">
+        <div className="absolute right-0 top-1/3 h-[400px] w-full max-w-[600px] rounded-full bg-accent/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">

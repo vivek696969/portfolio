@@ -59,8 +59,8 @@ export default function Contact() {
   return (
     <section id="contact" className="relative py-24 px-4 sm:px-6 lg:px-8">
       {/* Background glow */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-accent/5 blur-[120px]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden max-w-full">
+        <div className="absolute bottom-0 left-1/2 -translate-x-1/2 h-[500px] w-full max-w-[800px] rounded-full bg-accent/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
@@ -203,22 +203,23 @@ export default function Contact() {
 
             {/* Languages */}
             <motion.div variants={itemVariants}>
-              <p className="mb-2 text-xs font-medium uppercase tracking-wider text-gray-500">
+              <p className="mb-3 text-xs font-medium uppercase tracking-wider text-gray-500">
                 Languages
               </p>
-              <p className="text-sm text-gray-300">
-                <span className="text-white">Hindi</span>
-                <span className="mx-2 text-gray-600">•</span>
-                <span className="text-gray-400">(Native)</span>
-                <span className="mx-3 text-gray-700">|</span>
-                <span className="text-white">English</span>
-                <span className="mx-2 text-gray-600">•</span>
-                <span className="text-gray-400">(Conversational)</span>
-                <span className="mx-3 text-gray-700">|</span>
-                <span className="text-white">Nepali</span>
-                <span className="mx-2 text-gray-600">•</span>
-                <span className="text-gray-400">(Learning)</span>
-              </p>
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-gray-700/50 px-3 py-1.5 text-xs">
+                  <span className="font-semibold text-white">Hindi</span>
+                  <span className="text-gray-400">(Native)</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-gray-700/50 px-3 py-1.5 text-xs">
+                  <span className="font-semibold text-white">English</span>
+                  <span className="text-gray-400">(Conversational)</span>
+                </span>
+                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-gray-700/50 px-3 py-1.5 text-xs">
+                  <span className="font-semibold text-white">Nepali</span>
+                  <span className="text-gray-400">(Learning)</span>
+                </span>
+              </div>
             </motion.div>
           </motion.div>
         </div>

@@ -52,8 +52,8 @@ export default function Projects() {
   return (
     <section id="projects" className="relative py-24 px-4 sm:px-6 lg:px-8">
       {/* Background glow */}
-      <div className="pointer-events-none absolute inset-0 overflow-hidden">
-        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-[800px] rounded-full bg-accent/5 blur-[120px]" />
+      <div className="pointer-events-none absolute inset-0 overflow-hidden max-w-full">
+        <div className="absolute left-1/2 top-0 -translate-x-1/2 h-[500px] w-full max-w-[800px] rounded-full bg-accent/5 blur-[120px]" />
       </div>
 
       <div className="relative mx-auto max-w-6xl">
