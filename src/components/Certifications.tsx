@@ -38,6 +38,18 @@ const certifications = [
       'Comprehensive training covering SIEM tools, incident response, Python for security automation, and security operations fundamentals.',
   },
   {
+    title: 'Introduction to Cybersecurity',
+    subtitle: 'Cisco Networking Academy',
+    issuer: 'Cisco Networking Academy',
+    status: 'Completed',
+    statusColor: 'text-emerald-400',
+    badgeBg: 'bg-emerald-400/10 border-emerald-400/20',
+    StatusIcon: CheckCircle,
+    iconColor: 'text-emerald-400',
+    description:
+      'Fundamental principles of network security, threat landscape analysis, data privacy, and foundational concepts of cyber defense.',
+  },
+  {
     title: 'CompTIA Security+',
     subtitle: null,
     issuer: 'CompTIA',
@@ -105,7 +117,7 @@ export default function Certifications() {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, margin: '-60px' }}
-          className="mb-20 grid gap-8 md:grid-cols-2"
+          className="mb-20 grid gap-8 md:grid-cols-2 lg:grid-cols-3"
         >
           {certifications.map((cert) => {
             const { StatusIcon } = cert;
