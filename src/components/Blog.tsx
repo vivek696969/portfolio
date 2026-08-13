@@ -57,7 +57,7 @@ export default function Blog() {
               </h3>
               
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                Struggling to break into cybersecurity because every "entry-level" job demands 3+ years of experience? 
+                Struggling to break into Cybersecurity because every "entry-level" job demands 3+ years of experience? 
                 Discover why starting as a Tier-1 SOC Analyst breaks the experience barrier, equips you with real-world threat visibility, and opens doors to Pentesting, IR, and Security Engineering.
               </p>
             </div>
