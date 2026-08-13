@@ -66,7 +66,7 @@ export default function Blog() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6 pt-4 border-t border-gray-800/80">
               <div className="flex items-center gap-2 text-xs text-gray-300">
                 <ShieldCheck className="h-4 w-4 text-accent shrink-0" />
-                <span>Real-World SIEM & EDR Threat Analysis</span>
+                <span>Real-World siem & EDR Threat Analysis</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-gray-300">
                 <Zap className="h-4 w-4 text-cyan-400 shrink-0" />
