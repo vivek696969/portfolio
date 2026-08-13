@@ -74,7 +74,7 @@ export default function Blog() {
               </div>
               <div className="flex items-center gap-2 text-xs text-gray-300">
                 <TrendingUp className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span>4-Step - Entry Roadmap & Certifications</span>
+                <span>4-Step - Entry Roadmap and Certifications</span>
               </div>
             </div>
 
