@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { BookOpen, Clock, ArrowRight, ShieldCheck, Tag, Terminal, Zap, TrendingUp } from 'lucide-react';
 import BlogPostModal from './BlogPostModal';
+import { engineeringGuide } from '@/data/engineering-guide';
 
 export default function Blog() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -18,13 +19,13 @@ export default function Blog() {
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/10 px-3.5 py-1 text-xs font-semibold text-accent">
             <BookOpen className="h-3.5 w-3.5" />
-            Cybersecurity Blog & Career Insights
+            Development & Engineering Notes
           </div>
           <h2 className="text-3xl sm:text-4xl font-extrabold text-white tracking-tight">
             Latest <span className="bg-gradient-to-r from-accent to-cyan-400 bg-clip-text text-transparent">Articles & Guides</span>
           </h2>
           <p className="text-gray-400 text-sm sm:text-base">
-            In-depth guides, career roadmaps, and technical breakdowns designed to help aspiring cybersecurity professionals land their first role.
+            Practical learning notes connecting backend development, network fundamentals, security, and software testing.
           </p>
         </div>
 
@@ -36,29 +37,28 @@ export default function Blog() {
             <div className="flex flex-wrap items-center justify-between gap-4 mb-6">
               <div className="flex flex-wrap gap-2">
                 <span className="inline-flex items-center gap-1 rounded-full bg-accent/15 border border-accent/30 px-3 py-1 text-xs font-semibold text-accent">
-                  <Tag className="h-3 w-3" /> SOC Analyst
+                  <Tag className="h-3 w-3" /> Network & Security
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full bg-cyan-500/15 border border-cyan-500/30 px-3 py-1 text-xs font-semibold text-cyan-400">
-                  Career Guide
+                  Learning Guide
                 </span>
                 <span className="inline-flex items-center gap-1 rounded-full bg-blue-500/15 border border-blue-500/30 px-3 py-1 text-xs font-semibold text-blue-400">
-                  Blue Team
+                  Backend Development
                 </span>
               </div>
               <span className="flex items-center gap-1.5 text-xs text-gray-400 font-mono">
-                <Clock className="h-3.5 w-3.5 text-cyan-400" /> 8 min read
+                <Clock className="h-3.5 w-3.5 text-cyan-400" /> 4 min read
               </span>
             </div>
 
             {/* Title & Preview */}
             <div className="space-y-4">
               <h3 className="text-2xl sm:text-3xl font-bold text-white transition-colors group-hover:text-accent leading-snug">
-                Why SOC Roles Are the Best Starting Point for Any Fresher Entering Cybersecurity
+                {engineeringGuide.title}
               </h3>
               
               <p className="text-gray-300 text-sm sm:text-base leading-relaxed">
-                Struggling to break into Cybersecurity because every "entry-level" job demands 3+ years of experience? 
-                Discover why starting as a Tier-1 SOC Analyst breaks the experience barrier, equips you with real-world threat visibility, and opens doors to Pentesting, IR, and Security Engineering.
+                {engineeringGuide.intro}
               </p>
             </div>
 
@@ -66,15 +66,15 @@ export default function Blog() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 my-6 pt-4 border-t border-gray-800/80">
               <div className="flex items-center gap-2 text-xs text-gray-300">
                 <ShieldCheck className="h-4 w-4 text-accent shrink-0" />
-                <span>Real-World siem & EDR Threat Analysis</span>
+                <span>Python, Linux & Network Fundamentals</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-gray-300">
                 <Zap className="h-4 w-4 text-cyan-400 shrink-0" />
-                <span>Includes Interactive SOC Triage Simulator</span>
+                <span>Security Labs & Backend Concepts</span>
               </div>
               <div className="flex items-center gap-2 text-xs text-gray-300">
                 <TrendingUp className="h-4 w-4 text-emerald-400 shrink-0" />
-                <span>4-Step - Entry Roadmap and Certifications</span>
+                <span>QA Habits & Honest Project Scope</span>
               </div>
             </div>
 
@@ -86,7 +86,7 @@ export default function Blog() {
                 </div>
                 <div>
                   <div className="text-sm font-semibold text-white">Vivek Dhawan</div>
-                  <div className="text-xs text-gray-400">Cybersecurity Specialist</div>
+                  <div className="text-xs text-gray-400">BCA Student · Technical Learner</div>
                 </div>
               </div>
 

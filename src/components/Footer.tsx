@@ -43,7 +43,7 @@ export default function Footer() {
               <span className="text-sm font-medium text-gray-500">.sec</span>
             </a>
             <p className="text-sm text-gray-500">
-              SOC Analyst Aspirant | Cybersecurity Enthusiast
+              Backend Development | Network & Security Fundamentals
             </p>
           </div>
 

@@ -13,13 +13,13 @@ export default function ThreatSimulator() {
 
   const handleMitigate = () => {
     setStatus('mitigating')
-    setLogs((prev) => [...prev, '[08:24:16] > Running Python script: log_analyzer.py --block 192.168.1.105'])
+    setLogs((prev) => [...prev, '[08:24:16] > Running Python script: demo_firewall_rule --block 192.168.1.105'])
 
     setTimeout(() => {
       setLogs((prev) => [
         ...prev,
         '[08:24:17] > Firewall rule added: DROP all traffic from 192.168.1.105',
-        '[08:24:18] SUCCESS: Threat neutralized! System 100% Secure.',
+        '[08:24:18] SUCCESS: Threat neutralized! Example block applied; further review required.',
       ])
       setStatus('secured')
     }, 1200)
@@ -40,12 +40,12 @@ export default function ThreatSimulator() {
         <div className="flex items-center gap-2">
           <Cpu className="h-4 w-4 text-accent animate-pulse" />
           <span className="font-mono text-xs font-bold uppercase tracking-wider text-gray-200">
-            SOC L1 Triage Simulator
+            Network Security Demo
           </span>
         </div>
         <span className="inline-flex items-center gap-1 rounded-full bg-red-500/10 px-2 py-0.5 text-[10px] font-semibold text-red-400 border border-red-500/20">
           <span className="h-1.5 w-1.5 rounded-full bg-red-500 animate-ping" />
-          LIVE RADAR
+          SIMULATED
         </span>
       </div>
 
@@ -64,10 +64,10 @@ export default function ThreatSimulator() {
             </div>
             <div>
               <p className="text-xs font-bold text-emerald-400 uppercase tracking-wide">
-                THREAT NEUTRALIZED
+                SIMULATED RESPONSE COMPLETE
               </p>
               <p className="text-[11px] text-gray-300">
-                192.168.1.105 blocked by automated Python script.
+                Example response only; no real system is modified.
               </p>
             </div>
           </motion.div>
@@ -98,7 +98,7 @@ export default function ThreatSimulator() {
       <div className="rounded-lg border border-gray-800 bg-primary/90 p-3 mb-4 font-mono text-[11px] h-28 overflow-y-auto space-y-1">
         <div className="text-gray-500 flex items-center gap-1 mb-1">
           <Terminal className="h-3 w-3 text-accent" />
-          <span>soc-ops-stream.log</span>
+          <span>network-security-demo.log</span>
         </div>
         {logs.map((log, i) => (
           <p
@@ -134,12 +134,12 @@ export default function ThreatSimulator() {
           {status === 'mitigating' ? (
             <>
               <span className="h-3 w-3 border-2 border-primary border-t-transparent rounded-full animate-spin" />
-              Executing Python Mitigation...
+              Simulating response...
             </>
           ) : (
             <>
               <Play className="h-3.5 w-3.5 fill-primary" />
-              MITIGATE THREAT (EXECUTE PYTHON SCRIPT)
+              SIMULATE NETWORK RESPONSE
             </>
           )}
         </button>

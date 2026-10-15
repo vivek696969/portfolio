@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Terminal, ShieldCheck, Zap, FastForward, Lock } from 'lucide-react'
 
 const bootLogs = [
-  { text: '[SYS_INIT] Initializing Vivek Dhawan SOC Ops Matrix...', delay: 200 },
+  { text: '[SYS_INIT] Initializing Vivek Dhawan Development & Network Workspace...', delay: 200 },
   { text: '[NET_CHECK] Verifying Secure Connection & TLS Handshake...', delay: 600 },
   { text: '[THREAT_SCAN] Scanning active vectors... 0 Anomalies Found.', delay: 1100 },
   { text: '[ACCESS_GRANTED] Security clearance level: RECRUITER_GUEST_1.', delay: 1600 },
@@ -19,7 +19,7 @@ export default function BootSequence() {
 
   useEffect(() => {
     // Check if already booted in session
-    const hasBooted = sessionStorage.getItem('vd_soc_booted')
+    const hasBooted = sessionStorage.getItem('vd_portfolio_booted')
     if (hasBooted) {
       setShowOverlay(false)
       return
@@ -46,7 +46,7 @@ export default function BootSequence() {
     // Complete boot sequence
     const finishTimeout = setTimeout(() => {
       setIsDone(true)
-      sessionStorage.setItem('vd_soc_booted', 'true')
+      sessionStorage.setItem('vd_portfolio_booted', 'true')
       setTimeout(() => setShowOverlay(false), 800)
     }, 2200)
 
@@ -59,7 +59,7 @@ export default function BootSequence() {
 
   const handleSkip = () => {
     setIsDone(true)
-    sessionStorage.setItem('vd_soc_booted', 'true')
+    sessionStorage.setItem('vd_portfolio_booted', 'true')
     setShowOverlay(false)
   }
 
@@ -85,7 +85,7 @@ export default function BootSequence() {
               <div className="flex items-center gap-2">
                 <Terminal className="h-4 w-4 text-accent" />
                 <span className="font-bold text-accent tracking-wider uppercase text-xs sm:text-sm">
-                  SOC_OPS_TERMINAL // VIVEK_DHAWAN
+                  DEV_NETWORK_TERMINAL // VIVEK_DHAWAN
                 </span>
               </div>
               <button

@@ -47,7 +47,7 @@ export default function Hero() {
           >
             <Shield size={16} className="text-accent shrink-0" />
             <span className="text-accent text-xs sm:text-sm font-medium tracking-wide uppercase text-center">
-              SOC Analyst Aspirant | BCA Final Year
+              Backend Development | Networks & Security
             </span>
           </motion.div>
 
@@ -69,17 +69,17 @@ export default function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.35, duration: 0.5 }}
-            className="h-8"
+            className="min-h-16 sm:min-h-8"
           >
             <TypeAnimation
               sequence={[
-                'SOC Analyst Aspirant',
+                'Aspiring Backend Developer',
                 2000,
-                'Cybersecurity Enthusiast',
+                'Network & Security Learner',
                 2000,
-                'Threat Hunter in Training',
+                'QA-Ready Fundamentals',
                 2000,
-                'Python Security Scripter',
+                'Python & Web Development',
                 2000,
               ]}
               wrapper="span"
@@ -96,10 +96,10 @@ export default function Hero() {
             transition={{ delay: 0.4, duration: 0.5 }}
             className="text-lg text-gray-400 max-w-lg leading-relaxed"
           >
-            BCA final year student with hands-on experience in Linux log analysis,
-            network fundamentals, and threat detection through practical Python
-            security tools. Skilled in incident response workflows, log monitoring,
-            and security operations.
+            BCA student building a foundation in backend development, network and
+            security engineering, and software testing. Hands-on learning spans
+            Python scripting, Linux systems, Wazuh alert review, Windows security
+            logs, and rule-based log parsing.
           </motion.p>
 
           {/* Buttons */}
@@ -140,9 +140,9 @@ export default function Hero() {
             className="grid grid-cols-3 gap-4 pt-8 border-t border-gray-700/50"
           >
             {[
-              { value: '2', label: 'Projects' },
+              { value: '4', label: 'Project Tracks' },
               { value: '1', label: 'Certification' },
-              { value: 'BCA', label: 'Final Year' },
+              { value: 'BCA', label: '2024–2027' },
             ].map((stat, i) => (
               <div key={i} className="group cursor-default">
                 <p className="text-3xl font-bold bg-gradient-to-r from-white to-gray-400 bg-clip-text text-transparent group-hover:from-accent group-hover:to-cyan-300 transition-colors duration-300">
@@ -156,7 +156,7 @@ export default function Hero() {
           </motion.div>
         </motion.div>
 
-        {/* Right — Live SOC L1 Threat Simulator */}
+        {/* Right — Network security learning demo */}
         <motion.div
           initial={{ opacity: 0, scale: 0.9 }}
           animate={{ opacity: 1, scale: 1 }}

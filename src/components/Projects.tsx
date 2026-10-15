@@ -1,6 +1,6 @@
 'use client';
 import { motion } from 'framer-motion';
-import { Github, ExternalLink, Terminal, Globe, Rocket } from 'lucide-react';
+import { Github, ExternalLink, Terminal, Globe } from 'lucide-react';
 import SpotlightCard from './SpotlightCard';
 
 const containerVariants = {
@@ -20,17 +20,17 @@ const itemVariants = {
 };
 
 const featuredProject = {
-  title: 'Log Analyzer & Intrusion Detector',
-  year: 2026,
-  tags: ['Python', 'Bash', 'Log Parsing', 'Threat Detection'],
+  title: 'Python Log Analyzer & Network Anomaly Detector',
+  year: 'Analyzer completed · Anomaly extension in development',
+  tags: ['Python', 'Rule-Based Detection', 'Log Parsing'],
   description:
-    'Built a Python security tool that processes system log files, detects failed login attempts, identifies suspicious IPs performing brute-force attacks, and generates automated threat reports. Simulates core SOC L1 workflows: log parsing, anomaly detection, and threat escalation.',
+    'Implemented rule-based parsing to identify repeated failed-login events and suspicious IP activity in system logs. The analyzer generates structured findings for review. A planned extension will flag unusual connection and authentication patterns in syslog or exported network data; its validation methodology and detection results are still in progress.',
   features: [
-    'Automated log file parsing & analysis',
-    'Brute-force attack detection',
-    'Suspicious IP identification',
-    'Automated threat report generation',
-    'SOC L1 workflow simulation',
+    'Rule-based system-log parsing',
+    'Repeated failed-login detection',
+    'Suspicious IP activity identification',
+    'Structured findings for review',
+    'Network anomaly extension: in development',
   ],
   github: 'https://github.com/vivek696969/log-analyzer',
   icon: Terminal,
@@ -38,11 +38,29 @@ const featuredProject = {
 
 const otherProjects = [
   {
-    title: 'Personal Portfolio Website',
-    year: 2026,
-    tags: ['Next.js', 'TypeScript', 'Tailwind CSS', 'Framer Motion'],
+    title: 'E-Commerce / Inventory Backend',
+    year: 'Planned · Not yet implemented',
+    tags: ['Django ORM or FastAPI + SQLAlchemy', 'REST API', 'Relational Data Modeling'],
     description:
-      'Designed and deployed a responsive portfolio showcasing cybersecurity projects, technical skills, and professional background. Features interactive spotlight effects, smooth animations, and a dark cybersecurity theme.',
+      'Design target: product catalog, cart, and order-flow modules with separate Product, Cart, and Order models. Planned learning covers RESTful CRUD endpoints, request validation, authentication concepts, and ORM-based persistence. This project is not yet implemented; payment gateways, stock concurrency, and production features are outside the current work.',
+    github: null,
+    icon: Globe,
+  },
+  {
+    title: 'Cybersecurity Home Lab',
+    year: 'Hands-on practice environment',
+    tags: ['Wazuh', 'Kali Linux', 'Ubuntu Server', 'Windows'],
+    description:
+      'Built a personal multi-system environment for authorized security practice. Reviewed Wazuh alerts and Windows security logs to connect events with triage, alert review, and basic incident investigation. The lab strengthens Linux administration, authentication-activity review, and security-monitoring fundamentals.',
+    github: null,
+    icon: Terminal,
+  },
+  {
+    title: 'Personal Portfolio Website',
+    year: 'Published',
+    tags: ['HTML', 'CSS', 'Responsive Design', 'AI-Assisted Development'],
+    description:
+      'Designed and published a responsive personal website presenting projects, technical learning, and professional contact links. Clear project summaries and an accessible online profile help recruiters and collaborators explore my work. Used AI-assisted development to improve the site while retaining ownership of its content and presentation.',
     github: 'https://github.com/vivek696969/portfolio',
     icon: Globe,
   },
@@ -189,7 +207,7 @@ export default function Projects() {
                         ))}
                       </div>
 
-                      <a
+                      {project.github && <a
                         href={project.github}
                         target="_blank"
                         rel="noopener noreferrer"
@@ -198,29 +216,14 @@ export default function Projects() {
                         <Github className="h-4 w-4" />
                         View Source
                         <ExternalLink className="h-3.5 w-3.5" />
-                      </a>
+                      </a>}
                     </div>
                   </SpotlightCard>
                 </motion.div>
               );
             })}
 
-            {/* ── Coming soon teaser ── */}
-            <motion.div variants={itemVariants}>
-              <div className="flex h-full flex-col items-center justify-center rounded-xl border-2 border-dashed border-gray-700/50 bg-white/[0.02] p-6 text-center opacity-60 sm:p-8">
-                <div className="mb-4 flex h-12 w-12 items-center justify-center rounded-full bg-gray-800/80 text-gray-500">
-                  <Rocket className="h-5 w-5" />
-                </div>
-                <h3 className="mb-2 text-lg font-semibold text-gray-400">
-                  More Projects Coming Soon
-                </h3>
-                <p className="max-w-xs text-sm leading-relaxed text-gray-500">
-                  Currently working on new security tools and lab environments.
-                  Stay tuned for SIEM lab setups, network analysis tools, and
-                  more.
-                </p>
-              </div>
-            </motion.div>
+
           </div>
         </motion.div>
       </div>

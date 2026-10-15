@@ -1,7 +1,7 @@
 {
   "name": "cybersecurity-portfolio",
   "version": "1.0.0",
-  "description": "Professional cybersecurity SOC analyst portfolio",
+  "description": "Backend development, network and security engineering portfolio",
   "scripts": {
     "dev": "next dev",
     "build": "next build",
