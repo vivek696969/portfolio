@@ -5,23 +5,23 @@ import { MapPin, GraduationCap, ArrowRight } from 'lucide-react'
 import Image from 'next/image'
 
 const focusAreas = [
-  'Log Analysis & Threat Detection',
+  'Backend Development & REST API Concepts',
   'Linux Command-Line & System Administration',
-  'Network Security & Protocol Analysis',
-  'Python Security Automation',
+  'Network & Security Engineering Fundamentals',
+  'Python Scripting, Debugging & QA Fundamentals',
 ]
 
 const education = [
   {
-    degree: 'BCA',
+    degree: 'Bachelor of Computer Applications (BCA)',
     period: '2024 – 2027',
     institution: 'Sri Sai University, Palampur, HP',
     grade: 'CGPA: 7.11',
   },
   {
-    degree: 'DMCA',
-    period: '1 year from 2023 to 2024',
-    institution: 'baijnath, Himanchal Pardesh',
+    degree: 'Diploma in Modern Computer Applications (DMCA)',
+    period: '',
+    institution: 'CDAC',
     grade: 'Grade A',
   },
 ]
@@ -51,8 +51,8 @@ export default function About() {
             About <span className="gradient-text">Me</span>
           </h2>
           <p className="text-gray-400 text-lg max-w-2xl mx-auto">
-            Building a cybersecurity career with strong analytical thinking and
-            hands-on skills
+            Building practical development skills with a foundation in networks,
+            security, and structured problem solving
           </p>
         </motion.div>
 
@@ -130,19 +130,19 @@ export default function About() {
             className="space-y-6"
           >
             <p className="text-gray-300 leading-relaxed">
-              I&apos;m a BCA final year student at Sri Sai University, Palampur,
-              building a career in cybersecurity with a focus on Security Operations
-              Center (SOC) analysis. I&apos;ve developed hands-on skills in Linux log
-              analysis, network fundamentals, and threat detection through practical
-              Python security tools and independent lab work.
+              I&apos;m a BCA student at Sri Sai University, Palampur (2024–2027),
+              with a CGPA of 7.11. I&apos;m developing Python and web skills alongside
+              networking and security fundamentals that support backend systems.
+              My practical learning includes Linux, Wazuh alert review, Windows
+              security-log analysis, and rule-based log parsing.
             </p>
 
             <p className="text-gray-300 leading-relaxed">
-              My approach combines strong analytical thinking with practical skills —
-              from writing Python scripts that detect brute-force attacks to
-              understanding network protocols and firewall configurations. I&apos;m a
-              self-learner who built my cybersecurity foundation through online courses
-              and practical labs.
+              I&apos;m seeking an entry-level Backend Developer, Full Stack Developer,
+              QA/Software Tester, or technical support role, including opportunities
+              at Paras Technologies. I bring a hardworking, self-directed approach,
+              attention to detail when reviewing logs and documenting findings, and
+              adaptability when learning new tools, frameworks, and team workflows.
             </p>
 
             {/* Focus areas */}

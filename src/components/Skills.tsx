@@ -6,46 +6,34 @@ import SpotlightCard from './SpotlightCard'
 
 const skillCategories = [
   {
-    icon: Shield,
-    title: 'SOC Operations',
-    skills: [
-      'Log Analysis',
-      'Alert Triage',
-      'Threat Detection',
-      'Incident Response Basics',
-      'Log Monitoring',
-    ],
-  },
-  {
-    icon: Terminal,
-    title: 'Linux & Command-Line',
-    skills: [
-      'File Permissions',
-      'Process Monitoring',
-      'grep / find / SSH',
-      'netcat / tar / base64',
-      'Log File Analysis',
-    ],
-  },
-  {
-    icon: Globe,
-    title: 'Networking Fundamentals',
-    skills: [
-      'TCP/IP & OSI Model',
-      'DNS & HTTP/HTTPS',
-      'Firewalls & IDS/IPS',
-      'Network Protocols',
-    ],
+    icon: Code2,
+    title: 'Programming & Web',
+    skills: ['Python (Basic Scripting)', 'HTML', 'CSS', 'Git / GitHub'],
   },
   {
     icon: Code2,
-    title: 'Programming & Other',
-    skills: [
-      'Python Scripting',
-      'Security Automation',
-      'Web Development (HTML/CSS)',
-      '80 WPM Typing @ 99%',
-    ],
+    title: 'Backend & Data',
+    skills: ['Python File Handling', 'Log Parsing', 'Basic Database Concepts', 'REST API Concepts'],
+  },
+  {
+    icon: Shield,
+    title: 'QA & Problem Solving',
+    skills: ['Debugging', 'Structured Reporting', 'Test-Case Fundamentals', 'Defect-Reporting Fundamentals'],
+  },
+  {
+    icon: Globe,
+    title: 'Systems & Networking',
+    skills: ['Linux / Unix', 'Kali Linux', 'Ubuntu Server', 'TCP/IP', 'DNS', 'Ports & Protocols', 'SSH', 'Nmap'],
+  },
+  {
+    icon: Terminal,
+    title: 'Security Tools',
+    skills: ['Wazuh', 'Windows Security Logs', 'Alert Review', 'Basic Incident Investigation'],
+  },
+  {
+    icon: Terminal,
+    title: 'Working Skills',
+    skills: ['Detail-Oriented Documentation', 'Self-Directed Learning', 'Adaptable Teamwork', 'Typing: 80 WPM / 99% Accuracy'],
   },
 ]
 
@@ -84,7 +72,7 @@ export default function Skills() {
         </motion.div>
 
         {/* Cards grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {skillCategories.map((category, index) => {
             const Icon = category.icon
             return (

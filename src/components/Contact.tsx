@@ -78,8 +78,8 @@ export default function Contact() {
             </span>
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
-            Open to SOC Analyst L1 opportunities at Deloitte, Accenture, and
-            similar organizations.
+            Open to entry-level backend development, full stack development,
+            QA/software testing, and technical support opportunities.
           </p>
         </motion.div>
 
@@ -148,7 +148,7 @@ export default function Contact() {
             {/* Send Email CTA */}
             <motion.div variants={itemVariants}>
               <a
-                href="mailto:vivekdhawan063@gmail.com?subject=SOC%20Analyst%20Opportunity"
+                href="mailto:vivekdhawan063@gmail.com?subject=Technical%20Role%20Opportunity"
                 className="group inline-flex w-full items-center justify-center gap-3 rounded-xl bg-accent px-8 py-4 text-base font-semibold text-white shadow-lg shadow-accent/20 transition-all hover:bg-accent-dark hover:shadow-accent/30"
               >
                 <Send className="h-5 w-5 transition-transform group-hover:translate-x-0.5" />
@@ -197,7 +197,8 @@ export default function Contact() {
                 </span>
               </div>
               <p className="text-sm text-gray-400">
-                Available for full-time SOC Analyst L1 positions.
+                Seeking a first technical role at Paras Technologies or a team where I can
+                grow in backend development while applying networking and security fundamentals.
               </p>
             </motion.div>
 
@@ -215,10 +216,7 @@ export default function Contact() {
                   <span className="font-semibold text-white">English</span>
                   <span className="text-gray-400">(Conversational)</span>
                 </span>
-                <span className="inline-flex items-center gap-1.5 rounded-full bg-white/5 border border-gray-700/50 px-3 py-1.5 text-xs">
-                  <span className="font-semibold text-white">Nepali</span>
-                  <span className="text-gray-400">(Learning)</span>
-                </span>
+
               </div>
             </motion.div>
           </motion.div>

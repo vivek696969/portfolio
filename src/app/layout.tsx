@@ -4,16 +4,16 @@ import Navigation from '@/components/Navigation'
 import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
-  title: 'Vivek Dhawan | SOC Analyst Portfolio',
-  description: 'BCA final year student and aspiring SOC Analyst with hands-on experience in Linux log analysis, threat detection, Python security tools, and incident response workflows.',
-  keywords: ['Vivek Dhawan', 'SOC Analyst', 'Cybersecurity', 'Threat Detection', 'Log Analysis', 'Python Security', 'Incident Response'],
+  title: 'Vivek Dhawan | Backend, Network & Security Portfolio',
+  description: 'BCA student exploring backend development, network and security engineering, and QA fundamentals through Python scripting, Linux, Wazuh, and practical projects.',
+  keywords: ['Vivek Dhawan', 'Backend Development', 'Network Engineering', 'Security Engineering', 'Python', 'Software Testing', 'Linux'],
   authors: [{ name: 'Vivek Dhawan' }],
   robots: 'index, follow',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    title: 'Vivek Dhawan | SOC Analyst Portfolio',
-    description: 'Aspiring SOC Analyst with hands-on experience in cybersecurity operations, Linux log analysis, and Python security automation.',
+    title: 'Vivek Dhawan | Backend, Network & Security Portfolio',
+    description: 'Entry-level technical portfolio covering Python, backend development, networking, security labs, and QA fundamentals.',
     siteName: 'Vivek Dhawan Portfolio',
   },
   icons: {

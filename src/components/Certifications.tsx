@@ -26,40 +26,37 @@ const itemVariants = {
 
 const certifications = [
   {
-    title: 'Google Cybersecurity Professional Certificate',
-    subtitle: 'Python for Cybersecurity',
-    issuer: 'Google / Coursera',
-    status: 'Completed',
-    statusColor: 'text-emerald-400',
-    badgeBg: 'bg-emerald-400/10 border-emerald-400/20',
-    StatusIcon: CheckCircle,
-    iconColor: 'text-emerald-400',
-    description:
-      'Comprehensive training covering SIEM tools, incident response, Python for security automation, and security operations fundamentals.',
-  },
-  {
-    title: 'Introduction to Cybersecurity',
-    subtitle: 'Cisco Networking Academy',
+    title: 'Cisco Introduction to Cybersecurity',
+    subtitle: 'Cybersecurity fundamentals',
     issuer: 'Cisco Networking Academy',
     status: 'Completed',
     statusColor: 'text-emerald-400',
     badgeBg: 'bg-emerald-400/10 border-emerald-400/20',
     StatusIcon: CheckCircle,
     iconColor: 'text-emerald-400',
-    description:
-      'Fundamental principles of network security, threat landscape analysis, data privacy, and foundational concepts of cyber defense.',
+    description: 'Completed introductory cybersecurity training.',
   },
   {
-    title: 'CompTIA Security+',
-    subtitle: null,
-    issuer: 'CompTIA',
-    status: 'Planned (2026-2027)',
+    title: 'Networking Fundamentals',
+    subtitle: 'Network foundations',
+    issuer: 'Cisco Networking Academy',
+    status: 'In Progress',
     statusColor: 'text-amber-400',
     badgeBg: 'bg-amber-400/10 border-amber-400/20',
     StatusIcon: Clock,
     iconColor: 'text-amber-400',
-    description:
-      'Industry-standard certification covering IT security fundamentals, network security, threat management, and compliance.',
+    description: 'Currently developing networking fundamentals alongside hands-on systems practice.',
+  },
+  {
+    title: 'Google Cybersecurity Certificate',
+    subtitle: 'Cybersecurity learning',
+    issuer: 'Google / Coursera',
+    status: 'In Progress',
+    statusColor: 'text-amber-400',
+    badgeBg: 'bg-amber-400/10 border-amber-400/20',
+    StatusIcon: Clock,
+    iconColor: 'text-amber-400',
+    description: 'Currently working through the Google Cybersecurity Certificate on Coursera.',
   },
 ];
 
@@ -80,7 +77,7 @@ const qualities = [
     Icon: MessageSquare,
     title: 'Communication',
     description:
-      'Effective English communication with ability to explain technical concepts clearly.',
+      'Conversational English and native Hindi, with a focus on clear documentation and teamwork.',
   },
 ];
 
@@ -107,7 +104,7 @@ export default function Certifications() {
             </span>
           </h2>
           <p className="mx-auto max-w-2xl text-gray-400">
-            Professional certifications and continuous learning in cybersecurity.
+            Completed and ongoing training in networking and cybersecurity.
           </p>
         </motion.div>
 
@@ -174,7 +171,7 @@ export default function Certifications() {
           <p className="mx-auto max-w-2xl text-sm leading-relaxed text-gray-400">
             Built cybersecurity knowledge independently through online courses,
             practical labs, and hands-on projects. Continuously expanding skills
-            through platforms like TryHackMe and cybersecurity communities.
+            through networking and cybersecurity coursework.
           </p>
         </motion.div>
 
